@@ -1,0 +1,18 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+  .row.banner
+    .col-12
+      h1 MY skills
+
+  .row
+    .col-12.col-md-8
+      each skill in skills
+        .card
+          .card-block
+            h2= skill.name
+              +outputRating(skill.rating)
+
+           

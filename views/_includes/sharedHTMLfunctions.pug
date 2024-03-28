@@ -1,0 +1,12 @@
+//- Mixin to output star rating
+//- @param {Number} rating - The rating to be displayed
+mixin outputRating(rating)
+  p
+    //- Loop to output filled stars for the rating
+    //- i.fas.fa-star will render as <i class="fas fa-star"></i> in HTML, 
+    //- which displays a solid star icon if you have Font Awesome included in your project.
+    - for (let i = 1; i <= rating; i++)
+      i.fas.fa-star
+    //- Loop to output empty stars for the remaining rating
+    - for (let i = rating+1; i <= 5; i++)
+      i.far.fa-star
